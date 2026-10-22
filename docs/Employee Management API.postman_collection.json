@@ -1,0 +1,561 @@
+{
+  "info": {
+    "_postman_id": "8fffa8cd-4c2d-4d9a-b665-935b680e8f72",
+    "name": "Employee Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39056096"
+  },
+  "item": [
+    {
+      "name": "Create Employee",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Moris\",\r\n    \"lastName\": \"G\",\r\n    \"email\": \"moris.g@example.com\",\r\n    \"department\": \"HR\",\r\n    \"salary\": 60000,\r\n    \"status\": \"INACTIVE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "employees"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Employee",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"Moris\",\r\n    \"lastName\": \"G\",\r\n    \"email\": \"moris.g@example.com\",\r\n    \"department\": \"HR\",\r\n    \"salary\": 60000,\r\n    \"status\": \"INACTIVE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/employees",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "employees"
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 22 Oct 2026 18:55:24 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 10,\n  \"firstName\": \"Moris\",\n  \"lastName\": \"G\",\n  \"email\": \"moris.g@example.com\",\n  \"department\": \"HR\",\n  \"salary\": 60000,\n  \"status\": \"INACTIVE\",\n  \"createdAt\": \"2026-10-23T00:25:24.621716\",\n  \"updatedAt\": \"2026-10-23T00:25:24.621716\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get All Employees",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/employees?page=0&size=10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "employees"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get All Employees",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/employees?page=0&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 22 Oct 2026 18:57:39 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"content\": [\n    {\n      \"id\": 1,\n      \"firstName\": \"Althaf\",\n      \"lastName\": \"N M\",\n      \"email\": \"althafnm@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 55000,\n      \"status\": \"ACTIVE\",\n      \"createdAt\": \"2026-10-22T00:32:25.223235\",\n      \"updatedAt\": \"2026-10-22T14:04:26.619192\"\n    },\n    {\n      \"id\": 2,\n      \"firstName\": \"Grace\",\n      \"lastName\": \"B\",\n      \"email\": \"grace@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 70000,\n      \"status\": \"ACTIVE\",\n      \"createdAt\": \"2026-10-22T14:05:31.489859\",\n      \"updatedAt\": \"2026-10-22T16:11:00.851992\"\n    },\n    {\n      \"id\": 4,\n      \"firstName\": \"Alex\",\n      \"lastName\": \"j\",\n      \"email\": \"alex.j@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 40000,\n      \"status\": \"INACTIVE\",\n      \"createdAt\": \"2026-10-22T16:12:26.020019\",\n      \"updatedAt\": \"2026-10-22T22:51:54.834017\"\n    },\n    {\n      \"id\": 5,\n      \"firstName\": \"Mary\",\n      \"lastName\": \"Wright\",\n      \"email\": \"maryj@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 30000,\n      \"status\": \"ACTIVE\",\n      \"createdAt\": \"2026-10-22T16:14:13.8709\",\n      \"updatedAt\": \"2026-10-22T16:14:13.871483\"\n    },\n    {\n      \"id\": 6,\n      \"firstName\": \"Jane\",\n      \"lastName\": \"Smith\",\n      \"email\": \"jane@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 35000,\n      \"status\": \"ACTIVE\",\n      \"createdAt\": \"2026-10-22T16:14:59.388073\",\n      \"updatedAt\": \"2026-10-22T16:14:59.388073\"\n    },\n    {\n      \"id\": 7,\n      \"firstName\": \"Robert\",\n      \"lastName\": \"C\",\n      \"email\": \"robert@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 45000,\n      \"status\": \"ACTIVE\",\n      \"createdAt\": \"2026-10-22T16:15:53.933854\",\n      \"updatedAt\": \"2026-10-22T16:15:53.933854\"\n    },\n    {\n      \"id\": 8,\n      \"firstName\": \"John\",\n      \"lastName\": \"Doe\",\n      \"email\": \"john.doe@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 50000,\n      \"status\": \"ACTIVE\",\n      \"createdAt\": \"2026-10-22T19:32:11.029505\",\n      \"updatedAt\": \"2026-10-22T19:32:11.029505\"\n    },\n    {\n      \"id\": 9,\n      \"firstName\": \"Afrah\",\n      \"lastName\": \"N M\",\n      \"email\": \"afrah@gmail.com\",\n      \"department\": \"IT\",\n      \"salary\": 44000,\n      \"status\": \"ON_LEAVE\",\n      \"createdAt\": \"2026-10-22T22:47:45.156251\",\n      \"updatedAt\": \"2026-10-22T22:47:45.156251\"\n    },\n    {\n      \"id\": 10,\n      \"firstName\": \"Moris\",\n      \"lastName\": \"G\",\n      \"email\": \"moris.g@example.com\",\n      \"department\": \"HR\",\n      \"salary\": 60000,\n      \"status\": \"INACTIVE\",\n      \"createdAt\": \"2026-10-23T00:25:24.621716\",\n      \"updatedAt\": \"2026-10-23T00:25:24.621716\"\n    }\n  ],\n  \"empty\": false,\n  \"first\": true,\n  \"last\": true,\n  \"number\": 0,\n  \"numberOfElements\": 9,\n  \"pageable\": {\n    \"offset\": 0,\n    \"pageNumber\": 0,\n    \"pageSize\": 10,\n    \"paged\": true,\n    \"sort\": {\n      \"empty\": false,\n      \"sorted\": true,\n      \"unsorted\": false\n    },\n    \"unpaged\": false\n  },\n  \"size\": 10,\n  \"sort\": {\n    \"empty\": false,\n    \"sorted\": true,\n    \"unsorted\": false\n  },\n  \"totalElements\": 9,\n  \"totalPages\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Employee By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/employees/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "employees",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Employee By ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/employees/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "employees",
+                "1"
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 22 Oct 2026 19:17:55 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 1,\n  \"firstName\": \"Althaf\",\n  \"lastName\": \"N M\",\n  \"email\": \"althafnm@example.com\",\n  \"department\": \"Engineering\",\n  \"salary\": 55000,\n  \"status\": \"ACTIVE\",\n  \"createdAt\": \"2026-10-22T00:32:25.223235\",\n  \"updatedAt\": \"2026-10-22T14:04:26.619192\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Employee",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstName\": \"Jane\",\r\n  \"lastName\": \"Smith\",\r\n  \"email\": \"jane@example.com\",\r\n  \"department\": \"Engineering\",\r\n  \"salary\": 35000,\r\n  \"status\": \"ON_LEAVE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/employees/6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "employees",
+            "6"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Employee",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Jane\",\r\n  \"lastName\": \"Smith\",\r\n  \"email\": \"jane@example.com\",\r\n  \"department\": \"Engineering\",\r\n  \"salary\": 35000,\r\n  \"status\": \"ON_LEAVE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/employees/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "employees",
+                "6"
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 22 Oct 2026 19:18:14 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 6,\n  \"firstName\": \"Jane\",\n  \"lastName\": \"Smith\",\n  \"email\": \"jane@example.com\",\n  \"department\": \"Engineering\",\n  \"salary\": 35000,\n  \"status\": \"ON_LEAVE\",\n  \"createdAt\": \"2026-10-22T16:14:59.388073\",\n  \"updatedAt\": \"2026-10-23T00:44:15.193466\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Employee",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/employees/10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "employees",
+            "10"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete Employee",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/employees/10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "employees",
+                "10"
+              ]
+            }
+          },
+          "_postman_previewlanguage": "text",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 22 Oct 2026 19:02:15 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "Search Employees",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/employees/search?keyword=Althaf",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "employees",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "keyword",
+              "value": "Althaf"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Search Employees",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/employees/search?keyword=Althaf",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "employees",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "keyword",
+                  "value": "Althaf"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 22 Oct 2026 19:03:19 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"content\": [\n    {\n      \"id\": 1,\n      \"firstName\": \"Althaf\",\n      \"lastName\": \"N M\",\n      \"email\": \"althafnm@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 55000,\n      \"status\": \"ACTIVE\",\n      \"createdAt\": \"2026-10-22T00:32:25.223235\",\n      \"updatedAt\": \"2026-10-22T14:04:26.619192\"\n    }\n  ],\n  \"empty\": false,\n  \"first\": true,\n  \"last\": true,\n  \"number\": 0,\n  \"numberOfElements\": 1,\n  \"pageable\": {\n    \"offset\": 0,\n    \"pageNumber\": 0,\n    \"pageSize\": 5,\n    \"paged\": true,\n    \"sort\": {\n      \"empty\": false,\n      \"sorted\": true,\n      \"unsorted\": false\n    },\n    \"unpaged\": false\n  },\n  \"size\": 5,\n  \"sort\": {\n    \"empty\": false,\n    \"sorted\": true,\n    \"unsorted\": false\n  },\n  \"totalElements\": 1,\n  \"totalPages\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Filter Employees By Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/employees/filter?status=INACTIVE",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "employees",
+            "filter"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "INACTIVE"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter Employees By Status",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/employees/filter?status=INACTIVE",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "employees",
+                "filter"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "INACTIVE"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 22 Oct 2026 19:04:02 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"content\": [\n    {\n      \"id\": 4,\n      \"firstName\": \"Alex\",\n      \"lastName\": \"j\",\n      \"email\": \"alex.j@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 40000,\n      \"status\": \"INACTIVE\",\n      \"createdAt\": \"2026-10-22T16:12:26.020019\",\n      \"updatedAt\": \"2026-10-22T22:51:54.834017\"\n    },\n    {\n      \"id\": 6,\n      \"firstName\": \"Jane\",\n      \"lastName\": \"Smith\",\n      \"email\": \"jane@example.com\",\n      \"department\": \"Engineering\",\n      \"salary\": 35000,\n      \"status\": \"INACTIVE\",\n      \"createdAt\": \"2026-10-22T16:14:59.388073\",\n      \"updatedAt\": \"2026-10-23T00:31:10.908192\"\n    }\n  ],\n  \"empty\": false,\n  \"first\": true,\n  \"last\": true,\n  \"number\": 0,\n  \"numberOfElements\": 2,\n  \"pageable\": {\n    \"offset\": 0,\n    \"pageNumber\": 0,\n    \"pageSize\": 10,\n    \"paged\": true,\n    \"sort\": {\n      \"empty\": false,\n      \"sorted\": true,\n      \"unsorted\": false\n    },\n    \"unpaged\": false\n  },\n  \"size\": 10,\n  \"sort\": {\n    \"empty\": false,\n    \"sorted\": true,\n    \"unsorted\": false\n  },\n  \"totalElements\": 2,\n  \"totalPages\": 1\n}"
+        }
+      ]
+    }
+  ]
+}
